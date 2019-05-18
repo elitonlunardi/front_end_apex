@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- Estilo personalizado -->
+    <link rel="stylesheet" href="bootstrap/css/estilos.css">
+
+</head>
+
+<body>
+
+
+    <!-- Menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark fundo">
+        <a class="navbar-brand" href="#">Loja</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Listar Produtos
+                        <span class="sr-only">
+                            (current)
+                        </span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cadastrar Produtos</a>
+                </li>
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Produto" aria-label="Pesquisar">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Principal -->
+    <main>
+        <form class="formCadastro">
+            <input class="form-control" type="text" placeholder="Produto">
+            <input class="form-control" type="text" placeholder="Valor">
+            <input class="form-control" type="file">
+            <input class="btn btn-outline-primary" type="submit">
+        </form>
+    </main>
+
+    <!-- Bootstrap - JS -->
+    <script src="bootstrap/js/jquery-3.4.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

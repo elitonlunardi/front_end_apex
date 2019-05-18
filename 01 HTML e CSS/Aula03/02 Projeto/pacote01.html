@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de Viagens</title>
+
+    <!-- CSS global -->
+    <link rel="stylesheet" href="css/global.css">
+
+    <!-- Media queries -->
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 575px)">
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width:576px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/pc.css" media="(min-width: 1025px)">
+
+    <!-- Fotorama -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+
+    <!-- Link para menu mobile -->
+    <script src="js/menu.js"></script>
+
+    <!-- LightBox -->
+    <link rel="stylesheet" href="../lightbox2-master/lightbox/css/lightbox.min.css">
+    <script src="../lightbox2-master/lightbox/js/lightbox-plus-jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Topo -->
+    <header>
+        <h1>
+            Agência de Viagens
+        </h1>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="empresa.html">A Empresa</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <select name="menu" onchange="irPara()">
+            <option value="1">Início</option>
+            <option value="2">A Empresa</option>
+            <option value="3">Contato</option>
+        </select>
+
+
+    </header>
+
+    <!-- Banner -->
+    <section class="fotorama" data-width="100%">
+        <img src="imagens/carolinaNorte.jpg">
+    </section>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <h1>Destinos:</h1>
+        <div id="form">
+            <form>
+                <label>Hotel:</label>
+                <input type="text" name="hotel" value="Bosque de princ">
+                <label>Cidade:</label>
+                <input type="text" name="cidade" value="Paris">
+                <label>País:</label>
+                <input type="text" name="pais" value="França">
+                <label>Data de entrada:</label>
+                <input type="date" name="entrada">
+                <label>Data de saída:</label>
+                <input type="date" name="saida">
+                <label>Valor:</label>
+                <input type="text" name="valor" value="R$1.200,00">
+                <input type="button" value="Selecionar">
+            </form>
+        </div>
+
+        <section class="imagens">
+
+            <figure>
+                <a href="imagens/hotel-paris.jpg" onclick="mudarForm('1')" data-lightbox="Hotel 1"
+                    data-title="Montblanc Hotel"><img class="example-image imgPrincipal" src="imagens/hotel-paris.jpg"
+                        alt="Montblanc Hotel" /></a>
+            </figure>
+
+            <figure>
+                <a href="imagens/hotel-paris2.jpg" onclick="mudarForm('2')" data-lightbox="Hotel 1"
+                    data-title="Privé Hotel"><img class="example-image" src="imagens/hotel-paris2.jpg"
+                        alt="Privé Hotel" /></a>
+            </figure>
+
+
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Desenvolvido por Éliton Lunardi 2019</p>
+        <div>
+            <img src="imagens/iconfinder_facebook_circle_color_107175.svg">
+            <img src="imagens/iconfinder_twitter_circle_color_107170.svg">
+            <img src="imagens/iconfinder_62-instagram_social_4241321.svg">
+        </div>
+    </footer>
+
+</body>
+
+<script>
+    function mudarForm(hotel) {
+        var d = new Date();
+        var a = d.getDate() + "/0" + (d.getMonth() + 1) + "/" + d.getFullYear()
+        var american = d.getFullYear() + '-0' + d.getMonth() + '-' + d.getDate();
+        if (hotel == 1) {
+            document.getElementsByName('cidade')[0].value = 'paris';
+            document.getElementsByName('hotel')[0].value = 'Bosque de princ';
+            document.getElementsByName('pais')[0].value = 'França';
+            document.getElementsByName('valor')[0].value = 'R$1.200,00';
+            document.getElementsByName('entrada')[0].value = american;
+            document.getElementsByName('saida')[0].value = american;
+
+        }
+
+        if (hotel == 2) {
+            document.getElementsByName('cidade')[0].value = 'paris';
+            document.getElementsByName('hotel')[0].value = 'Glamour camp';
+            document.getElementsByName('pais')[0].value = 'França';
+            document.getElementsByName('valor')[0].value = 'R$3.500,00';
+            document.getElementsByName('entrada')[0].value = american;
+            document.getElementsByName('saida')[0].value = american;
+        }
+
+    }
+</script>
+
+</html>

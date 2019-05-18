@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Cabeçalho -->
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+
+    <!-- Anexar a folha de estilos (CSS) -->
+    <link href="estilos.css" rel="stylesheet">
+    <!-- fotorama -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> 
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> 
+
+</head>
+
+<!-- Corpo da página -->
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+
+        <!-- Menu -->
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contato</a>
+        </nav>
+
+        <!-- Pesquisa -->
+        <form>
+            <input type="text" placeholder="Pesquisar"><input type="submit">
+        </form>
+    </header>
+
+    <!-- Conteúdos do site -->
+    <main>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="fotorama" data-width="100%">
+                <img src="imagens/banner1.jpg">
+                <img src="imagens/banner2.jpg">
+                <img src="imagens/banner3.jpg">
+            </div>
+        </section>
+
+        <!-- Áreas de atuação -->
+        <section id="atuacao">
+            <figure>
+                <img src="imagens/app.png">
+                <figcaption>Apps</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/ecommerce.png">
+                <figcaption>Lojas virtuais</figcaption>
+            </figure>
+            <figure>
+                <img src="imagens/mobileSite.png">
+                <figcaption>Sites responsivos</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido na Apex - 2019</p>
+        <img src="imagens/iconfinder_soundcloud_834709.png">
+        <img src="imagens/iconfinder_facebook_834722.svg">
+        <!-- <img src="imagens/iconfinder_facebook_834722.png"> -->
+    </footer>
+</body>
+</html>

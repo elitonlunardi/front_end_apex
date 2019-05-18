@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07 Evento teclado</title>
+    <script>
+        function evento(){
+            var campo = document.getElementById('campo').value;
+            window.alert(campo);
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+        Up: Adiciona o caractére no campo e depois executa a função 
+        Press: Exceuta a ação e depois adiciona no campo(Shift, Esc, Ctrl não funcionam)
+        Down: Executa a função e depois adiciona no campo(Qualquer tecla funciona);
+    -->
+    <input type="text" id="campo" placeholder="Digite algo..." onkeydown="evento()">
+</body>
+</html>

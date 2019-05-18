@@ -1,0 +1,89 @@
+/* Topo */
+
+header{
+    background-color: #2f496e;
+    color: #ffffff;
+    text-align: center;
+}
+
+header h1{
+    font-size: 32px;
+    padding: 20px;
+}
+
+header nav{
+    display: none;
+}
+
+header select {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* Conteúdo principal */
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Pacotes */
+
+.pacotes h1{
+    font-size: 40px;
+    margin: 30px 7px;
+    text-align: center;
+}
+
+.pacotes a{
+    text-decoration: none;
+}
+
+.pacotes figure{
+    width: 100%;
+    margin: 6px;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.pacotes img{
+    width: 100%;
+    height: 225px;
+}
+
+.pacotes figcaption{
+    background-color: #2988bc;
+    width: 95%;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#missaoGrupo{
+    background-color: purple;
+}
+
+
+/* Rodapé */
+
+footer{
+    margin-top: 50px;
+    overflow: hidden;
+    background-color: #2f496e;
+    color: #ffffff;
+}
+
+footer p{
+    float: left;
+    margin: 14px 10px;
+}
+footer div {
+    float: right;
+}
+footer img{
+    width: 35px;
+    margin: 2px;
+}
+

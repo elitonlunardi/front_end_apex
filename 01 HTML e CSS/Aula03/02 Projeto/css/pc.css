@@ -1,0 +1,220 @@
+/* Topo */
+
+header{
+    background-color: #2f496e;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+header h1{
+    font-size: 20px;
+    padding: 20px;
+    float: left;
+}
+
+header nav{
+    float: right;
+}
+
+header a{
+    color: #ffffff;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+header select {
+    display: none;
+}
+
+/* Conteúdo principal */
+
+main{
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+main h1{
+    font-size: 30px;
+    margin: 20px 10px;
+    font-style: oblique;
+}
+
+
+
+/* Pacotes */
+
+.pacotes h1{
+    font-size: 30px;
+    margin: 30px 0px;
+}
+
+.pacotes a{
+    text-decoration: none;
+}
+
+.pacotes figure{
+    width: 227px;
+    display: inline-block;
+}
+
+.pacotes figure:nth-child(3),
+.pacotes figure:nth-child(4),
+.pacotes figure:nth-child(5){
+    margin-left: 26px;
+}
+
+.pacotes img{
+    width: 100%;
+    height: 150px;
+}
+
+.pacotes figcaption{
+    background-color: #2988bc;
+    width: 120px;
+    text-align: center;
+    color: #ffffff;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+/* pacote01.html */
+main form{
+    background-color: rgb(201, 199, 199);
+    width:40%;
+    border-style: solid;
+    float: left;
+    box-shadow: 2px 3px 2px 2px grey;
+    margin: 10px;
+    padding: 15px;
+    border: 5px;
+}
+
+input:focus{
+    border: 2px solid;
+}
+
+.imagens{
+    width: 50%;
+    float: right;
+}
+
+main label{
+    margin: 2px;
+    font-size: 18px; 
+}
+
+main input{
+    font-size: 18px;
+    width:100%;
+    margin: 5px 0px;
+    border-radius: 3px;
+}
+
+main input[type="button"]{
+    width:30%;
+    padding: 7px;
+    margin: 5px 0px;
+    border-radius: 5px;
+}
+
+main input[type="button"]:hover{
+    cursor: pointer;
+    border-radius: 5px;
+    border-color: black;
+}
+
+
+main img {
+    width: 20%;
+    float: left;
+}
+
+.imgPrincipal{
+    width: 100%;
+    padding: 5px;
+    height: 350px;
+}
+
+
+/* Empresa.html */
+
+h1{
+    margin: 55px 0px;
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.agrupamentoValores{
+    width: 100%;
+    height: 350px;
+    background: aqua;
+}
+
+.line{
+    width: 100%;
+    background-color: rgb(49, 49, 247);
+}
+
+#missaoGrupo{
+    height: 200px;
+    width: 28%;
+    border: 2px solid;
+    box-shadow: 2px 2px 2px 2px grey;
+    float: left;
+}
+
+#agrupamentoValores div{
+    display: inline-block;
+}
+
+#visaoGrupo{
+    height: 200px;
+    width: 28%;
+    border: 2px solid;
+    box-shadow: 2px 2px 2px 2px grey;
+    float: left;
+}
+
+#valoresGrupo{
+    height: 200px;
+    width: 28%;
+    border: 2px solid;
+    box-shadow: 2px 2px 2px 2px grey;
+    float: left;
+} 
+
+#missao, #visao, #valores{
+    background-color: red;
+}
+
+/* Rodapé */
+footer{
+    margin-top: 50px;
+    overflow: hidden;
+    background-color: #2f496e;
+    color: #ffffff;
+}
+
+footer p{
+    float: left;
+    margin: 14px 10px;
+}
+footer div {
+    float: right;
+}
+footer img{
+    width: 35px;
+    margin: 2px;
+}
+
+footer img:hover{
+    cursor: pointer;
+}

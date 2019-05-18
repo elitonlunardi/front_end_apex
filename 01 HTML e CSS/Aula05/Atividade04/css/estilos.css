@@ -1,0 +1,14 @@
+figure{
+    border: solid 2px;
+    box-shadow: 3px 3px 3px 3px rgb(139, 139, 139);
+}
+
+figure a img{
+    width: 100%;
+
+}
+
+
+.imgPrincipal{
+    height: 200px !important;
+}

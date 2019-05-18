@@ -1,0 +1,97 @@
+body{
+    background-color: #B0ABFF;
+    color: white;
+}
+
+nav{
+    margin-bottom: 50px;
+}
+
+.navColor{
+    background-color: #585580;
+}
+
+#banner{
+    height: 300px;
+}
+
+.card {
+    margin-right: 20px;
+}
+
+.carousel-item{
+    margin-bottom: 20px;
+}
+
+.w-100{
+    height: 420px;
+}
+
+a{
+    color: black;
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: purple;
+}
+
+p{
+    margin-bottom: 25px;
+}
+
+.tamanhoParagrafo{
+    font: bold 35px sans-serif;
+    text-align: center;
+}
+
+footer{
+    margin-top: 50px;
+    height: 90px;
+    background-color: #585580;
+}
+
+footer p{
+    margin-top: 40px;
+    float: right;
+}
+
+footer h5{
+    margin-top: 32px;
+    float: right;
+    padding-right: 5px;
+}
+
+corBranca{
+    color:white;
+}
+
+.card-body{
+    color:black;
+}
+
+
+h1{
+    margin-bottom: 20px;
+}
+
+.text-center{
+    font: bold 30px sans-serif;
+}
+
+.estender{
+    height: 340px;
+}
+
+.espacamento{
+    margin-bottom:30px;
+}
+
+.h1Localizacao{
+    margin-top: 30px;
+}
+
+#footerLocalizacao{
+  padding-top: 50px;
+}

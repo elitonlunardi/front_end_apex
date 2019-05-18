@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04 Formulário</title>
+
+    <style>
+        *{
+            outline: none;
+        }
+        input[type="text"]{
+            border: solid 2px black;
+        }
+    </style>
+
+    <script>
+        function valida() {
+            var campo = document.getElementById('campo');
+
+                if (campo.value == "") {
+                    campo.style.border="solid 1px red";
+                    return false;
+                }
+        }
+
+        function campoSemEstilo(){
+            document.getElementById('campo').style.borderColor="black";
+        }
+
+    </script>
+
+</head>
+<body>
+    <form action="http://www.google.com.br" onsubmit="return valida()">
+        <input type="text" id="campo" value="opa" onkeyup="campoSemEstilo()">
+        <input type="submit">
+    </form>    
+</body>
+</html>

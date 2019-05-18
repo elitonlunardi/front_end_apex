@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>09 Condicional composta</title>
+
+    <script>
+
+        function calcular() {
+            var campo1 = parseFloat(document.getElementsByTagName('input')[0].value);
+            var campo2 = parseFloat(document.getElementsByTagName('input')[1].value);
+            var media = (campo1 + campo2) / 2;
+
+            if ((media < 0) || (media > 10)) {
+                window.alert('Média inválida');
+            } else if (media >= 7) {
+                window.alert('Aprovado');
+            }else if (media >= '5') {
+                window.alert('Em exame');
+            }else{
+                window.alert('Reprovado(a)');
+            }
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <input type="number" placeholder="Primeira nota">
+        <input type="number" placeholder="Segunda nota">
+        <input type="button" value="Calcular" onclick="calcular()">
+    </form>
+</body>
+
+</html>

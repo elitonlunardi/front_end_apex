@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Cabeçalho -->
+<head>
+    <meta charset="utf-8">
+    <title>Formulários</title>
+</head>
+
+<!-- Corpo da página -->
+<body>
+
+
+    <form action="http://www.g1.com.br">
+        <label>Email:</label>
+        <input type="email" required>
+
+        <label>Senha:</label>
+        <input type="password" required>
+
+        <input type="submit" value="Entrar">
+    </form>
+
+    <hr>
+
+    <form>
+        <input type="text" placeholder="Nome">
+        <select>
+            <option>Estado</option>
+            <option>SC</option>
+            <option>RJ</option>
+            <option>PB</option>
+            <option>PE</option>
+            <option>AC</option>
+        </select>
+
+        <fieldset>
+            <legend>Turno do curso</legend>
+            <input type="radio" name="turno" value="Matutino">
+            <label>Matutino</label>
+            <input type="radio" name="turno" value="Vespertino">
+            <label>Vespertino</label>
+            <input type="radio" name="turno" value="Noturno">
+            <label>Noturno</label>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Cursos</legend>
+            <input type="checkbox">
+            <label>Front-end</label>
+            <input type="checkbox">
+            <label>Java</label>
+            <input type="checkbox">
+            <label>C#</label>
+        </fieldset>
+
+        <textarea placeholder="Descrição"></textarea>
+
+        <input type="button" value="Cadastrar">
+        <input type="reset" value="Redefinir">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{
+    background: #48bd65;
+}
+
+main{
+    width: 900px;
+    margin: 0 auto;
+}
+
+form{
+    background: rgb(226, 226, 226);
+    padding:  10px;
+    box-shadow: 2px 2px 2px 2px #11832d;
+    margin-top: 50px;
+
+}
+.btn-large{
+    margin-left: 10px;
+}
+
+img{
+    margin-top: 10px;
+    height: 150px;
+}
+
+.centralizar{
+    text-align: center;
+}

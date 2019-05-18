@@ -1,0 +1,7 @@
+body{
+    background-color: rgb(8, 255, 41);
+}
+
+h1::after{
+    content: "Médio";
+}

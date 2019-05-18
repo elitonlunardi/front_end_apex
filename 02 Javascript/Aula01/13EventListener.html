@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>13 Event Listener</title>
+    <script>
+        window.onload = function () {
+            function mensagem() {
+                window.alert('Você clicou no botão');
+            }
+            document.getElementsByTagName('button')[0].addEventListener("click", mensagem);
+        }
+    </script>
+</head>
+
+<body>
+    <button>Clique aqui</button>
+
+</body>
+
+</html>

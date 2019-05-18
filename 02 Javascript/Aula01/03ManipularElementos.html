@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03 Manipular Elementos</title>
+</head>
+<body>
+    <p>Meu primeiro elemento</p>
+    <h1 class="titulo">Meu segundo elemento</h1>
+    <h2 id="titulo">Meu terceiro elemento</h2>
+
+    <script>
+        
+        document.getElementsByTagName('p')[0].innerText = "Texto alterado";
+        document.getElementsByClassName('titulo')[0].style.color = "red";
+        document.getElementById("titulo").innerHTML = "<i>Outro texto alterado<i>";
+
+    </script>
+</body>
+</html>

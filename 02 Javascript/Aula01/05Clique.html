@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>05 clique </title>
+
+    <style>
+        div {
+            background-color: red;
+            padding: 200px;
+            width: 0px;
+        }
+
+        button {
+            outline: none;
+            width: 400px;
+            background-color: black;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        button:nth-child(1) {
+            display: none;
+        }
+    </style>
+
+    <script>
+        function animacao(tipo) {
+
+            var div = document.getElementsByTagName('div')[0];
+            var btn01 = document.getElementsByTagName('button')[0];
+            var btn02 = document.getElementsByTagName('button')[1];
+
+          if(tipo == 'exibir'){
+            div.style.display='block';
+            btn01.style.display='none';
+            btn02.style.display='block';
+          }
+          else{
+            div.style.display='none';
+            btn01.style.display='block';
+            btn02.style.display='none';
+          }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <button onclick="animacao('exibir')">Exibir</button>
+    <button onclick="animacao('ocultar')">Ocultar</button>
+
+    <div>
+
+    </div>
+</body>
+
+</html>

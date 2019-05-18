@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>14 Datas</title>
+    <script>
+
+        window.onload = function () {
+            var data = new Date();
+            document.getElementsByTagName("h1")[0].innerText =
+                data.getDate() + '/' + (data.getMonth() + 1) + '/' + data.getFullYear();
+
+            document.getElementsByTagName("h1")[1].innerText =
+                data.getHours() + ':' + data.getMinutes() + ':' + data.getSeconds()
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1></h1>
+    <h1></h1>
+</body>
+
+</html>

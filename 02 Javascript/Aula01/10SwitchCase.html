@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>10 Switch Case</title>
+
+    <script>
+        function descricaoCurso() {
+            var curso = parseInt(document.getElementsByTagName('select')[0].value);
+            switch (curso) {
+                case 1:
+                    window.alert('O html é ....');
+                    break;
+                case 2:
+                    window.alert('O css  é ....');
+                    break;
+                case 3:
+                    window.alert('O js é ....');
+                    break;
+                case 4:
+                    window.alert('O jquery é ....');
+                    break;
+                default: window.alert('Selecione um curso');
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <select onchange="descricaoCurso()">
+        <option value="0">Cursos</option>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option value="3">JavaScript</option>
+        <option value="4">jQuery</option>
+    </select>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+/* Padronizando tags */
+*{
+    font: 14px sans-serif;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+form{
+    padding: 10px;
+    border: solid 2px black;
+}
+
