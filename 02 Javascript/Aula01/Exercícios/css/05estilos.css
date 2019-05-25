@@ -1,0 +1,54 @@
+/* padrãonizando as tags */
+*{
+    font: 14px sans-serif;
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+}
+
+
+h1{
+    font: 30px Narrow; 
+    padding: 10px;
+    text-align: center;
+}
+
+body{
+    background-color: #FFFB00;
+}
+
+form{
+    width: 500px;
+    padding: 9px;
+    margin: auto;
+    background-color: #FFFC4D;
+    border: solid 2px #807E0A;
+    box-shadow: 0px 0px 8px;
+}
+
+label img{
+    width: 42px;
+    margin-top: 4px;
+    margin-right: 0px;
+    float: left;
+}
+
+input[type="date"]{
+    width: 430px;
+    height: 26px;
+    border: solid 3px #FFD900;
+    margin: 9px;
+    margin-left: 0px;
+    float : right;
+}
+
+input[type="button"]{
+    border: solid 2px #FFD900;
+    width: 100px;
+    padding: 5px;
+    margin: 9px;
+}
+
+.hvr-float:hover{
+    background-color: #FFD900;
+}

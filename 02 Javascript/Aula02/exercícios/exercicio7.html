@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+
+<body>
+    <script>
+        var palavra = prompt("Digite o a palavra");
+        var palavraAntesDasFinais = "";
+        var palavrasFinais = "";
+
+        if (palavra.length > 2) {
+            palavraAntesDasFinais = palavra.substr(0, palavra.length - 2);
+            palavrasFinais = palavra.substr(palavra.length - 2, palavra.length);
+
+
+            if (palavrasFinais.toLowerCase() != "ar") {
+                alert("A palavra deve terminar com 'AR'");
+            } else {
+                alert("Eu " + palavraAntesDasFinais + "o" + "\n" +
+                    "Tu " + palavraAntesDasFinais + "as" + "\n" +
+                    "Ele " + palavraAntesDasFinais + "a" + "\n" +
+                    "Nós " + palavraAntesDasFinais + "amos" + "\n" +
+                    "Vós " + palavraAntesDasFinais + "ais" + "\n" +
+                    "Eles " + palavraAntesDasFinais + "am");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 04</title>
+    <link href="css/04estilos.css" rel="stylesheet">
+    <script>
+        window.onload = function () {
+
+            function calcular() {
+
+                var produto = document.getElementById('nomeProduto').value;
+                var valorProduto = document.getElementById('valorProduto').value;
+                var dinheiro = document.getElementsByName('formaPag')[0].checked;
+                var cartao = document.getElementsByName('formaPag')[1].checked;
+
+                if ((dinheiro == true) && (parseFloat(valorProduto) > 500.00)) {
+                    window.alert('Produto ' + produto + " custará R$" + parseFloat(valorProduto - parseFloat(valorProduto * 0.1)));
+                }
+                else {
+                    window.alert('Produto ' + produto + " custará R$" + parseFloat(valorProduto));
+                }
+            }
+            document.getElementById('finalizar').addEventListener('click', calcular);
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <figure>
+        <figcaption>Checkout</figcaption>
+        <img src="imagens/iconfinder_cart_3018582.svg">
+    </figure>
+
+    <div id="grupo">
+
+        <form>
+            <input type="text" placeholder="Nome do produto" id="nomeProduto">
+            <input type="text" placeholder="Valor do produto" id="valorProduto">
+
+            <label id="espacamento"><img src="imagens/iconfinder_money_299107.svg" alt="Dinheiro"></label>
+            <label><img src="imagens/iconfinder_creditcard_1055079.svg" alt="Cartão"></label>
+            <br>
+
+            <input id="espacamento" type="radio" name="formaPag">
+            <input type="radio" name="formaPag">
+
+            <br>
+            <input id="finalizar" type="button" value="Finalizar">
+        </form>
+    </div>
+</body>
+
+</html>

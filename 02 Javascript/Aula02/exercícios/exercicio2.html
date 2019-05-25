@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+
+<body>
+
+
+    <script>
+        let numero = prompt("Informe um número");
+
+        var resultado;
+        for (let index = numero - 1; index > 0; index--) {
+            if (index == numero - 1) {
+                resultado = numero * index;
+                document.write(numero + " x " + index + " = " + resultado + "</br>");
+            } else {
+                document.write(resultado + " x " + index + " = " + resultado * index + "</br>");
+                resultado *= index;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

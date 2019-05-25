@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 6</title>
+    <link href="css/07estilos.css" rel="stylesheet">
+
+
+    <script>
+        window.onload = function () {
+            document.getElementsByTagName('input')[1].addEventListener('click', mostrarTabuada);
+        }
+
+        function mostrarTabuada() {
+            var tabuada = document.getElementsByTagName('input')[0].value;
+            var stringTabuada = '';
+            for (let index = 0; index <= 10; index++) {
+                stringTabuada += parseInt(tabuada * index) + "\n";
+            }
+            window.alert(stringTabuada);
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form>
+        <input type="text" placeholder="Tabuada desejada">
+        <input type="button" value="Calcular">
+    </form>
+
+</body>
+
+</html>

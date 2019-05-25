@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 textos</title>
+
+    <script>
+        var palavra = prompt("Informe uma palavra");
+        var contarCaracteres = palavra.length;
+        document.write("O usuário informou: " + palavra + "</br>")
+        document.write("Palavra em letras maiúsculas: " + palavra.toUpperCase() + "</br>");
+        document.write("Palavra em letras minúsculas: " + palavra.toLowerCase() + "</br>");
+        document.write("Remover espaços no começo e no fim da string: " + palavra.trim() + "</br>");
+        document.write("Exibindo o primeiro caractére: " + palavra.charAt(0) + "</br>");
+        document.write("Quantidade de caractéres: " + contarCaracteres + "<hr>");
+
+        for (let index = 0; index < palavra.length; index++) {
+            document.write((index + 1) + " letra informada é: " + palavra.charAt(index) + "</br>");
+        }
+        document.write("<hr>");
+        document.write("Alterar a primeira letra A encontrada: " + palavra.replace("a", "o") + "</br>");
+        document.write("Alterar todas as letras A encontradas: " + palavra.replace(/a/g, "o"));
+        document.write("Exibindo a palavra a partir do segundo caractére " + palavra.substr(1)) + "</br>";
+        document.write("Exibindo do primeiro ao terceiro caractére: " + palavra.substr(0, 3));
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

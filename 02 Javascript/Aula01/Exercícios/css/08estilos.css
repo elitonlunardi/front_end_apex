@@ -1,0 +1,49 @@
+/* Padronizando tags */
+*{
+    font: 14px sans-serif;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+body{
+    background-color: #50E682;
+}
+
+form{
+    width: 550px;
+    padding: 15px;
+    margin: auto;
+    margin-top: 50px;
+    border: solid 2px black;
+    box-shadow: 0px 0px 13px;
+}
+
+input[type="number"]{
+    margin: 10px;
+    width: 530px;
+    height: 30px;
+}
+
+input[type="button"]{
+    width: 120px;
+    height: 40px;
+    padding: 8px;
+    margin-left: 10px;
+    margin-bottom: 7px;
+    background-color: rgb(230, 230, 230);
+    transition-duration: 0.6s;
+    border-radius: 10px;
+}
+input[type="button"]:hover{
+    cursor: pointer;
+    border: solid 2px green;
+    background-color: #92E0AC;
+}
+
+::placeholder{
+    font: 20px verdana bold;
+    text-align: center;
+}
+
+

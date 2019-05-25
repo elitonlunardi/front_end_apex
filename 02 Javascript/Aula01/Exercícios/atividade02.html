@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 02</title>
+
+    <link href="css/02estilos.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <input type="number" placeholder="Preço do produto">
+            <input id="calcular" type="button" value="Cadastrar">
+        </fieldset>
+    </form>
+
+    <script>
+        function calcularDesconto() {
+            var precoPadrao = parseFloat(document.getElementsByTagName('input')[0].value);
+            window.alert(precoPadrao - (precoPadrao * 0.1));
+        }
+        document.getElementById('calcular').addEventListener('click', calcularDesconto);
+
+    </script>
+
+</body>
+
+</html>

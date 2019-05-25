@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 01</title>
+
+    <link href="css/01estilos.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <form>
+        <input type="text" placeholder="Nome">
+        <input type="text" placeholder="Idade">
+        <input type="text" placeholder="Cidade">
+        <input id="enviar" type="button" value="Enviar">
+    </form>
+
+    <script>
+        function exibirMensagem() {
+            var nome = document.getElementsByTagName('input')[0].value;
+            var idade = document.getElementsByTagName('input')[1].value;
+            var cidade = document.getElementsByTagName('input')[2].value;
+
+            if (nome == '' || idade == '' || cidade == '') {
+                window.alert('Preencha todos os campos');
+            }
+            else {
+                alert("Olá " + nome + ", você tem " + idade + " anos de idade e mora em " + cidade);
+            }
+        }
+        document.getElementById('enviar').addEventListener('click', exibirMensagem);
+    </script>
+
+</body>
+
+</html>

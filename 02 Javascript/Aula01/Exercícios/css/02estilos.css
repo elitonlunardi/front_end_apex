@@ -1,0 +1,51 @@
+/* Padronizando tags */
+*{
+    font: 14px sans-serif;
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+body{
+    /* background: linear-gradient(45deg, rgba(0,183,234,1) 0%,rgba(0,158,195,1) 100%); */
+    background-color: #24A0FF
+}
+
+
+fieldset{
+    background-color: rgb(233, 233, 233);
+    border: solid 2px #20E89C;
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 2px 2px rgb(58, 58, 58);
+}
+
+
+form{
+    width: 400px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    border-style: solid 2px;
+}
+
+input[type="number"]{
+    width: 350px;
+    padding: 3px;
+    border: solid 1px;
+}
+
+input[type="button"]{
+    width: 100px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 7px;
+    border: solid 1px black;
+    font: bold;
+}
+
+input[type="button"]:hover{
+    cursor: pointer;
+    background-color: #24FF6D;
+}
