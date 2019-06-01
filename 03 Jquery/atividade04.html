@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04</title>
+    <script src="jquery-3.4.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("button:nth-child(1)").click(function () {
+                $("div").hide();
+            });
+
+            $("button:nth-child(2)").click(function () {
+                $("div").show();
+            });
+
+            $("button:nth-child(3)").click(function () {
+                $("div").fadeIn();
+            });
+
+            $("button:nth-child(4)").click(function () {
+                $("div").fadeOut();
+            });
+
+            $("button:nth-child(5)").click(function () {
+                $("div").slideUp();
+            });
+
+            $("button:nth-child(6)").click(function () {
+                $("div").slideDown();
+            });
+
+            $("button:nth-child(7)").click(function () {
+                $("div").slideToggle();
+            });
+
+        })
+    </script>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 30px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button>Hide</button>
+    <button>Show</button>
+    <button>FadeIn</button>
+    <button>FadeOut</button>
+    <button>SlideUp</button>
+    <button>SlideDown</button>
+    <button>SlideToggle</button>
+    <div></div>
+</body>
+
+</html>

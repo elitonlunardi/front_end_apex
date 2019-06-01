@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+
+    <style>
+        input[type="text"] {
+            width: 300px;
+        }
+
+        table {
+            border: solid 1px black;
+            margin-top: 30px;
+            width: 300px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ccc
+        }
+
+        tr:first-child {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <script>
+
+        var vetor = [];
+
+        function cidades() {
+            var campo = document.getElementsByTagName('input')[0].value;
+            vetor = campo.split(',');
+            cadastrarCidades();
+        }
+
+
+
+        function removerCidade(elemento) {
+            var linha = elemento.getAttribute("value");
+            vetor.splice(linha, 1)
+            atualizarTabela();
+        }
+
+        function atualizarTabela() {
+            tabela = document.getElementsByTagName("table")[0];
+            qtdLinhas = tabela.getElementsByTagName("tr").length - 1;
+
+            for (let index = qtdLinhas; index > 0; index--) {
+                tabela.deleteRow(index);
+            }
+
+            cadastrarCidades();
+
+
+        }
+
+        function cadastrarCidades() {
+            tabela = document.getElementsByTagName("table")[0];
+
+            for (let index = 0; index < vetor.length; index++) {
+                var linha = tabela.insertRow(-1);
+                var celula1 = linha.insertCell(0);
+                var celula2 = linha.insertCell(1);
+
+                celula1.innerHTML = vetor[index];
+                celula2.innerHTML = "<button value='" + index + "' onClick='removerCidade(this)'>Excluir</button>"
+            }
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+    <input type="text" placeholder="Informe o nome de cidades">
+    <button onclick="cidades()" type="button">Enviar</button>
+
+    <table>
+        <tr>
+            <td>Cidade</td>
+            <td>Excluir</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

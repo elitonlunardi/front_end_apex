@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+</head>
+
+<body>
+    <script>
+        var nomes = ["Luana", "Márcio", "Renata", "Sérgio"];
+
+        document.write("<h1>Laço for </h1>")
+        for (let index = 0; index < nomes.length; index++) {
+            document.write(nomes[index] + "<hr>");
+        }
+
+        document.write("<h1>Laço foreach </h1>")
+        nomes.forEach(exibirNomes);
+
+
+        function exibirNomes(nome) {
+            document.write(nome + "<hr>");
+        }
+
+    </script>
+</body>
+
+</html>
