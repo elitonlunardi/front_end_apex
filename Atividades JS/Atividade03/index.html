@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 03</title>
+
+    <script src="../jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#enviar").click(function (e) {
+                var nome = $("#nome").val();
+                var email = $("#email").val();
+                var departamento = $("#departamento").val();
+                var assunto = $("#assunto").val();
+                var mensagem = $("#mensagem").val();
+
+                if (
+                    nome !== "" &&
+                    email !== "" &&
+                    assunto !== "" &&
+                    mensagem !== "" &&
+                    departamento !== "0"
+                ) {
+
+                    if (!(nome.length > 2)) {
+                        alert("O nome deve ter pelo menos 3 caractéres");
+                    }
+
+                    else if (!(mensagem.length > 9)) {
+                        alert("A mensagem deve ter pelo menos 10 caractéres");
+                    }
+
+                    else { alert("deu boa"); }
+
+                } else {
+                    alert("preencha todos os campos e selecione um departamento");
+                }
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+
+                            <div class="form-group">
+                                <!-- <label for="nome">Nome do aluno</label> -->
+                                <input class="form-control" type="text" placeholder="Nome" id="nome">
+                            </div>
+
+
+                            <div class="form-group">
+                                <!-- <label for="nota1">Nota 1</label> -->
+                                <input class="form-control" type="email" placeholder="E-mail" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <!-- <label for="nota1">Nota 1</label> -->
+                                <select class="custom-select" id="departamento">
+                                    <option selected value="0">Departamento</option>
+                                    <option value="1">Administrativo</option>
+                                    <option value="2">Financeiro</option>
+                                    <option value="3">Recursos Humanos</option>
+                                    <option value="4">Suporte técnico</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label for="nota1">Nota 1</label> -->
+                                <input class="form-control" type="text" placeholder="Assunto" id="assunto">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label for="nota1">Nota 1</label> -->
+                                <input class="form-control" type="text" placeholder="Mensagem" id="mensagem">
+                            </div>
+
+                            <input type="button" id="enviar" class="btn btn-primary" value="Enviar">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

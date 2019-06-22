@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 01</title>
+
+    <script src="../jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="estilos.css">
+
+    <script>
+        $(document).ready(function () {
+
+            var dados = [];
+            $("#btnCalcularMedia").click(function (e) {
+                var nome = $("#nome").val();
+                var nota1 = $("#nota1").val();
+                var nota2 = $("#nota2").val();
+                var nota3 = $("#nota3").val();
+                var media = null;
+
+                if (nome !== "" && nota1 !== "" && nota2 !== "" && nota3 !== "") {
+                    media = ((parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3).toFixed(2);
+
+                    if (media > 6) {
+                        alert(nome + " está aprovado!")
+                    } else if (media < 6) {
+                        alert(nome + " está reprovado!")
+                    }
+
+                    dados.push({ nome: nome, media: media, situacao: media > 6 ? "Aprovado" : "Reprovado" });
+                    addRow();
+                    $("input:text").val(""); 
+                } else {
+                    alert("Preencha todos os campos.");
+                }
+            });
+
+
+            function addRow() {
+                var tabela = $("#tabela tbody");
+                tabela.append("<tr><td>" + dados[dados.length - 1].nome + "</td><td>" + dados[dados.length - 1].media + "</td><td>" + dados[dados.length - 1].situacao + "</td></tr>");
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <!-- <label for="nome">Nome do aluno</label> -->
+                                <input class="form-control" type="text" placeholder="Nome do aluno" id="nome">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label for="nota1">Nota 1</label> -->
+                                <input class="form-control" type="text" placeholder="Nota 1" id="nota1">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label for="nota1">Nota 1</label> -->
+                                <input class="form-control" type="text" placeholder="Nota 2" id="nota2">
+                            </div>
+
+                            <div class="form-group">
+                                <!-- <label for="nota1">Nota 1</label> -->
+                                <input class="form-control" type="text" placeholder="Nota 3" id="nota3">
+                            </div>
+
+                            <input type="button" id="btnCalcularMedia" class="btn btn-primary" value="Calcular média">
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table" id="tabela">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Nota</th>
+                        <th scope="col">Situação</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

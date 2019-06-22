@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04</title>
+
+    <script src="../jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#campoCPF").keypress(function () {
+                var cpf = $("#campoCPF").val();
+                if (cpf.length == 14)
+                    return false;
+
+            })
+
+            $("#campoCPF").keyup(function (e) {
+                var cpf = $("#campoCPF").val();
+                if (cpf.length > 0) {
+
+                    var ultimaLetra = cpf.charAt(cpf.length - 1);
+                    console.log(ultimaLetra);
+                    if (!(isNaN(ultimaLetra))) {
+                        if (cpf.length == 3 || cpf.length == 7) {
+                            $("#campoCPF").val((cpf + "."));
+                        }
+                        if (cpf.length == 11) {
+                            $("#campoCPF").val((cpf + "-"));
+                        }
+                    } else {
+                        $("#campoCPF").val(cpf.substr(0, cpf.length - 1));
+                    }
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-group">
+            <input type="text" placeholder="Digite o CPF" class="form-control" id="campoCPF">
+        </div>
+    </div>
+</body>
+
+</html>

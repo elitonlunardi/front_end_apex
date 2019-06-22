@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Charset -->
+    <meta charset="utf-8">
+
+    <!-- Título -->
+    <title>14 Routing</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+    <script>
+        //Definir o projeto
+        var projeto = angular.module("aplicacao", ["ngRoute"]);
+
+        //Controlador
+        projeto.controller("controle", function ($scope) { });
+
+        projeto.config(function ($routeProvider) {
+
+            $routeProvider
+                .when("/pg1", { templateUrl: "pagina1.html" })
+                .when("/pg2", { templateUrl: "pagina2.html" })
+                .when("/pg3", { templateUrl: "pagina3.html" })
+                .otherwise({ templateUrl: "pagina1.html" });
+        });
+    </script>
+</head>
+
+<body ng-app="aplicacao" ng-controller="controle">
+    <nav>
+        <a href="#!pg1">Página 1</a>
+        <a href="#!pg2">Página 2</a>
+        <a href="#!pg3">Página 3</a>
+    </nav>
+
+    <div ng-view>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Título -->
+    <title>08 Agrupar campos</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script>
+        var projeto = angular.module("aplicacao", []);
+
+        projeto.controller("controle", function ($scope) {
+
+            $scope.exibir = function (dados) {
+                alert("Nome: " + dados.nome + "\nCidade: " + dados.cidade);
+            }
+        });
+
+    </script>
+
+</head>
+
+<body ng-app="aplicacao" ng-controller="controle">
+    <form>
+        <input class="form-control" type="text" placeholder="Nome" ng-model="dados.nome">
+        <input class="form-control" type="text" placeholder="Cidade" ng-model="dados.cidade">
+        <input type="button" class="btn btn-primary" value="Enviar" ng-disabled="!dados.nome || !dados.cidade"
+            ng-click="exibir(dados)">
+    </form>
+</body>
+
+</html>

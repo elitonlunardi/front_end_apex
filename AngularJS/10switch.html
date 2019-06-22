@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Título -->
+    <title>10 Switch</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script>
+        var projeto = angular.module("aplicacao", []);
+
+        projeto.controller("controle", function ($scope) {
+
+
+        });
+
+    </script>
+
+</head>
+
+<body ng-app="aplicacao" ng-controller="controle">
+
+    <select class="form-control" ng-model="cidades">
+        <option value="1">Blumenau</option>
+        <option value="2">Florianópolis</option>
+        <option value="3">Joinville</option>
+    </select>
+
+    <h1 ng-switch="cidades">
+        <span ng-switch-when="1">Cidade da oktoberfest</span>
+        <span ng-switch-when="2">Cidade da taínha</span>
+        <span ng-switch-when="3">Cidade das maravilhas arquitetônicas</span>
+    </h1>
+
+</body>
+
+</html>

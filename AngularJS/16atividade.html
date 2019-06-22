@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Título -->
+    <title>16 Atividade</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <script>
+        var projeto = angular.module("aplicacao", []);
+
+        projeto.controller("controle", function ($scope) {
+            $scope.pessoas = [
+                { nome: "Roberto Justus", idade: 20 },
+                { nome: "Fausto Silva", idade: 42 },
+                { nome: "Gugu", idade: 67 },
+                { nome: "Sílvio Santos", idade: 67 },
+                { nome: "Raul Gil", idade: 67 }
+            ];
+
+
+            $scope.cadastrar = function (n, i) {
+                $indexEncontrado = $scope.pessoas.findIndex(r => r.nome === n);
+                if ($indexEncontrado == "-1") {
+                    $scope.pessoas.push({ nome: n, idade: i });
+                    $scope.nome = "";
+                    $scope.idade = "";
+                    $scope.alertVisible = false;
+                } else {
+                    $scope.alertVisible = true;
+                }
+
+            }
+
+            $scope.remover = function (index) {
+                alert(index);
+                $scope.pessoas.splice(index, 1);
+            }
+
+        });
+    </script>
+</head>
+
+<body ng-app="aplicacao" ng-controller="controle" ng-init="alertVisible=false">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"> </div>
+            <div class="col-md-6">
+                <div ng-show="alertVisible" class="alert alert-danger">Nome já existe na tabela. Selecione outro!</div>
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Nome da pessoa" ng-model="nome">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Idade da pessoa" ng-model="idade">
+                            </div>
+                            <input type="button" class="btn btn-primary" value="Cadastrar" ng-disabled="!nome || !idade"
+                                ng-click="cadastrar(nome,idade)">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card" style="margin-top:35px;">
+            <div class="card-body">
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" style="margin-top:10px" class="form-control"
+                            placeholder="Digite para filtrar na tabela" ng-model="filtro">
+                    </div>
+                </div>
+
+                <table class="table" style="margin-top: 10px">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Idade</th>
+                            <th>Remover</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr ng-repeat="p in pessoas | orderBy:'nome'"> -->
+                        <tr ng-repeat="p in pessoas | filter : filtro">
+                            <td>{{$index + 1}}</td>
+                            <td>{{p.nome}}</td>
+                            <td>{{p.idade}}</td>
+                            <td><input type="button" class="btn btn-danger" ng-click="remover($index)" value="Remover">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

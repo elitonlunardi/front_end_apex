@@ -1,0 +1,19 @@
+.fundo{
+    background-color: rgb(65, 65, 255);
+}
+
+.card {
+    text-align: center;
+    margin-top: 10px;
+    border: 1.2px solid;
+}
+
+.formCadastro{
+    width: 60%;
+    margin: 30px auto;
+}
+
+.formCadastro input{
+    margin-bottom: 10px;    
+}
+

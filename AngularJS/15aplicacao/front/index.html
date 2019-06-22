@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Charset -->
+    <meta charset="utf-8">
+
+    <!-- Título -->
+    <title>15 Aplicação</title>
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--AngularJS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        //Definir o projeto
+        var projeto = angular.module("aplicacao", []);
+
+        //Controlador
+        projeto.controller("controle", function ($scope, $http) {
+
+            $scope.selecionar = function () {
+                $http({
+                    method: "GET",
+                    url: "../back/selecionar.php"
+                }).then(function (retorno) {
+                    $scope.dados = retorno.data.registros
+                });
+            }
+
+            $scope.cadastrar = function () {
+                $http({
+                    method: "POST",
+                    url: "../back/cadastrar.php",
+                    data: {
+                        'titulo': $scope.titulo,
+                        'noticia': $scope.noticia
+                    }
+                }).then(function () {
+                    $scope.selecionar();
+                    $scope.titulo = "";
+                    $scope.noticia = "";
+                })
+            }
+
+        });
+    </script>
+
+</head>
+
+<body ng-app="aplicacao" ng-controller="controle" ng-init="selecionar()">
+    <div class="container">
+        <form style="margin-top: 40px">
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Título" ng-model="titulo">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Notícia" ng-model="noticia">
+
+            </div>
+            <div class="form-group">
+                <input type="button" class="btn btn-primary" ng-disabled="!titulo || !noticia" ng-click="cadastrar()"
+                    value="Cadastrar">
+            </div>
+
+        </form>
+
+        <table class="table" style="margin-top:60px">
+            <thead>
+                <tr>
+                    <th>Código da notícia</th>
+                    <th>Título da notícia</th>
+                    <th>Notícia</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="d in dados">
+                    <td>{{d.id}}</td>
+                    <td>{{d.titulo}}</td>
+                    <td>{{d.noticia}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

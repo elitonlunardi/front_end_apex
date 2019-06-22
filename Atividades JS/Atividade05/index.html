@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 04</title>
+
+    <script src="../jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin-top: 20px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            var numeroAleatorio = Math.floor((Math.random() * 100) + 1)
+            var numeroDeTentativas = 0;
+            console.log(numeroAleatorio);
+            $("#jogar").click(function (e) {
+                var valorUsuario = $("#campoNumero").val();
+                if (valorUsuario !== "") {
+                    if (isNaN(valorUsuario)) {
+                        alert("Por favor digite um número");
+                    } else {
+                        if (numeroAleatorio == parseInt(valorUsuario)) {
+                            if (numeroDeTentativas == 0) {
+                                alert("Parabéns, acertou de primeira. Número gerado: " + numeroAleatorio + " . Tentativas: " + numeroDeTentativas);
+                            } else if (numeroDeTentativas >= 1 && numeroDeTentativas <= 5) {
+                                alert("Muito bom. Número: " + numeroAleatorio);
+                            }
+                            else if (numeroDeTentativas >= 6 && numeroDeTentativas <= 10) {
+                                alert("Bom, mas pode melhorar. Número gerado: " + numeroAleatorio + " . Tentativas: " + numeroDeTentativas);
+                            }
+                            else if (numeroDeTentativas >= 11 && numeroDeTentativas <= 15) {
+                                alert("Precisa de mais sorte. Número gerado: " + numeroAleatorio + " . Tentativas: " + numeroDeTentativas);
+                            }
+                            else if (numeroDeTentativas > 15) {
+                                alert("Mais sorte na próxima. Número gerado: " + numeroAleatorio + " . Tentativas: " + numeroDeTentativas);
+                            }
+                        } else {
+                            var diferenca = numeroAleatorio - valorUsuario;
+
+                            if (valorUsuario > numeroAleatorio) {
+                                diferenca = valorUsuario - numeroAleatorio;
+                            }
+                            if (diferenca >= 1 && diferenca <= 10) {
+                                alert("Está perto");
+                            } else if (diferenca >= 11 && diferenca <= 20) {
+                                alert("Está longe");
+                            } else {
+                                alert("Muito longe");
+                            }
+
+                            numeroDeTentativas++;
+                        }
+                    }
+                } else {
+                    alert("Digite um número");
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="form-group">
+            <input type="text" placeholder="Adivinhe o número gerado" class="form-control" id="campoNumero">
+        </div>
+        <div class="form-group">
+            <input type="button" id="jogar" class="btn btn-primary" value="JOGAR">
+        </div>
+
+    </div>
+
+    </div>
+</body>
+
+</html>

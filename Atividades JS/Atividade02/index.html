@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 02</title>
+
+    <script src="../jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var nomes = ["Eliton", "Ana", "João", "Maria", "José", "Cadu", "Roberto", "Yago", "Silvio"];
+            var tabela = $("#tabela tbody");
+
+            for (let i = 0; i < nomes.length; i++) {
+                tabela.append("<tr><td>" + nomes[i] + "</td></tr>");
+            }
+
+            $("#campoFiltro").keyup(function (event) {
+                tabela.html("");
+                var valorDigitado = $("#campoFiltro").val();
+                if (event.keyCode >= 65 && event.keyCode <= 122) {
+                    for (let j = 0; j < nomes.length; j++) {
+                        if (nomes[j].indexOf(valorDigitado) != -1) {
+                            tabela.append("<tr><td>" + nomes[j] + "</td></tr>");
+                        }
+                    }
+                }
+
+            });
+
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <input id="campoFiltro" class="form-control" type="text"
+                placeholder="Digite um nome para ser pesquisado no vetor">
+        </div>
+
+        <div class="row">
+            <table class="table" id="tabela" style="margin-top: 100px;">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
