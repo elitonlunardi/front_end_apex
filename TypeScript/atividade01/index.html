@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ativiade 01</title>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="estilos/estilos.css">
+    <script src="js/vetorUsuarios.js"></script>
+    <script src="js/usuario.js"></script>
+    <script src="js/vetorProdutos.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <a href="#" class="brand-logo">Atividade 01</a>
+        </div>
+
+        <ul class="right hidden">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Produtos</a></li>
+            <li><a href="#">Sair</a></li>
+        </ul>
+    </nav>
+
+    <section class="row acesso">
+        <form class="col s4 offset-s1">
+            <h1>Novo por aqui? Crie sua conta</h1>
+            <input type="text" placeholder="Usuário" id="novoUsuario">
+            <input type="password" placeholder="Senha" id="novaSenha">
+            <input type="password" placeholder="Repita a senha" id="repetirNovaSenha">
+            <input class="btn" type="button" value="Criar conta" onclick="cadastrar()">
+        </form>
+
+        </div>
+
+        <form class="col s5 offset-s1">
+            <h1>Acessar conta</h1>
+            <input type="text" placeholder="Usuário" id="usuario">
+            <input type="password" placeholder="Senha" id="senha">
+            <input class="btn" type="button" value="Entrar" onclick="logar()">
+        </form>
+
+    </section>
+
+    <section class="hidden">
+        <div class="row">
+            <form class="col s6 offset-s3">
+                <input type="text" placeholder="Nome do produto" id="nomeProduto">
+                <input type="number" placeholder="Valor do produto" id="valorProduto">
+                <input type="text" placeholder="Nome da marca" id="marcaProduto">
+                <input id="cadastrarProduto" class="btn" type="button" value="Cadastrar">
+            </form>
+        </div>
+
+        <div class="row">
+            <table class="tableProdutos">
+                <thead>
+                    <tr>
+                        <th>Nome produto</th>
+                        <th>Valor do produto</th>
+                        <th>Marca do produto</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</body>
+
+</html>

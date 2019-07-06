@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>03 - Calculadora</title>
+    <script src="03calculadora.js"></script>
+    <script>
+        function calculo() {
+            var numero1 = parseFloat(document.getElementById("campo1").value);
+            var numero2 = parseFloat(document.getElementById("campo2").value);
+            var operacao = parseInt(document.getElementById("operacao").value);
+
+
+            var calc = new Calculadora();
+            calc.numero1 = numero1;
+            calc.numero2 = numero2;
+            calc.escolherOperacao(operacao);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="number" id="campo1" placeholder="Número 1">
+        <input type="number" id="campo2" placeholder="Número 2">
+        <select id="operacao">
+            <option value="1">Somar</option>
+            <option value="2">Subtrair</option>
+            <option value="3">Multiplicar</option>
+            <option value="4">Dividir</option>
+        </select>
+        <input type="button" id="calcular" value="Calcular">
+    </form>
+
+</body>
+
+</html>
