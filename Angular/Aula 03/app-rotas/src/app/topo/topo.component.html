@@ -1,0 +1,6 @@
+<nav *ngIf="usu.UsuarioAutenticado">
+    <a routerLink="/inicio">Início</a>
+    <a routerLink="/cursos">Cursos</a>
+    <a routerLink="/contato">Contato</a>
+    <a (click)="sair()">Sair</a>
+</nav>

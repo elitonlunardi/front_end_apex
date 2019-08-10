@@ -1,0 +1,55 @@
+body{
+    background-color: rgb(248, 221, 170);
+}
+
+.navColor{
+    background-color: rgb(247, 172, 35) !important
+}
+
+
+.marginBotton25{
+    margin-bottom: 25px;
+}
+
+.marginBottom50{
+    margin-bottom: 50px;
+}
+
+.bgColor{
+    background-color: rgb(252, 220, 191);
+    border-color:rgb(221, 127, 19);
+}
+
+.cardBtnButton{
+    color: rgb(252, 136, 27);
+    border-color: rgb(253, 170, 16);
+}
+
+.cardBtnButton:hover{
+    color: white;
+    background-color: black;
+    border-color:rgb(248, 227, 187);
+}
+
+.testeFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color:#fff;
+}
+
+.footer{
+    margin-top: 80px;
+    padding-top: 30px;
+    height: 100px;
+    background-color:  rgb(247, 172, 35);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sobreMarginAuto{
+    margin: 10px auto;
+}
+
+
+

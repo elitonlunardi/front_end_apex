@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-body">
+        <form>
+            <div [hidden]="!alert" class="alert alert-info">{{alert}}</div>
+            <div class="form-group">
+                <label for="estado">Selecione algum estado</label>
+                <select class="form-control" name="estado" [(ngModel)]="estado" id="estado">
+                    <option value="0">Selecione</option>
+                    <option value="1">Santa Catarina</option>
+                    <option value="2">Brasília</option>
+                    <option value="3">São Paulo</option>
+                </select>
+            </div>
+
+            <!-- cidades do estado de santa catarina -->
+            <div [hidden]="!(estado==1)" class="form-group">
+                <label for="cidade">Selecione alguma cidade</label>
+                <select class="form-control" name="cidade" [(ngModel)]="cidade" (change)="mostrarDescricao()">
+                    <option selected value="4">Selecione</option>
+                    <option value="5">Joinville</option>
+                    <option value="6">São Joaquim</option>
+                    <option value="7">Florianópolis</option>
+                </select>
+            </div>
+
+            <!-- cidades do estado de brasília -->
+            <div [hidden]="!(estado==2)" class="form-group">
+                <label for="cidade">Selecione alguma cidade</label>
+                <select class="form-control" name="cidade" [(ngModel)]="cidade" (change)="mostrarDescricao()">
+                    <option selected value="8">Selecione</option>
+                    <option value="9">Planaltina</option>
+                    <option value="10">Samambaia</option>
+                    <option value="11">Lagoa Sul</option>
+                </select>
+            </div>
+
+
+            <!-- cidades do estado do rj -->
+            <div [hidden]="!(estado==3)" class=" form-group">
+                <label for="cidade">Selecione alguma cidade</label>
+                <select class="form-control" name="cidade" [(ngModel)]="cidade" (change)="mostrarDescricao()">
+                    <option selected value="12">Selecione</option>
+                    <option value="13">Angra dos reis</option>
+                    <option value="14">Rio de Janeiro</option>
+                    <option value="15">Armação de búzios</option>
+                </select>
+            </div>
+        </form>
+    </div>
+</div>

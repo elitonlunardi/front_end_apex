@@ -1,0 +1,5 @@
+<input type="text" placeholder="Pesquisar" name="pesquisa" [(ngModel)]="pesquisa">
+
+<ul>
+    <li *ngFor="let nome of nomes | filtro : pesquisa ">{{nome}}</li>
+</ul>

@@ -1,0 +1,18 @@
+.color{
+    background-color: rgb(12, 12, 248);
+}
+
+.row:hover p{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.map {
+    margin: 20px auto;
+}
+
+p{
+    margin: 40px auto;
+    color: white;
+    font-size: 100px;
+}

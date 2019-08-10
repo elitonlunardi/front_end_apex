@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-4 offset-4">
+            <div class="card">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="titulo" placeholder="Título do lembrete"
+                            [(ngModel)]="lembrete.titulo">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="descricao" placeholder="Descrição do lembrete"
+                            [(ngModel)]="lembrete.descricao">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="date" class="form-control" name="data" placeholder="Data do lembrete"
+                            [(ngModel)]="lembrete.data">
+                    </div>
+
+                    <input type="button" class="btn btn-primary" value="Cadastrar lembrete" (click)="cadastrar()" [disabled]="!lembrete.descricao || !lembrete.titulo || !lembrete.data">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Título do lembrete</th>
+                    <th>Descrição do lembrete</th>
+                    <th>Data do lembrete</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let l of lembretes; let i = index">
+                    <td>{{l.titulo}}</td>
+                    <td>{{l.descricao}}</td>
+                    <td>{{l.data}}</td>
+                    <td><input type="button" class="btn btn-warning" value="Alterar"></td>
+                    <td><input type="button" class="btn btn-danger" value="Remover"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

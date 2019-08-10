@@ -1,0 +1,13 @@
+<label>
+    <input type="checkbox" [(ngModel)]="selecao">
+    <span>Exibir</span>
+</label>
+
+<h1 [ngClass]="{selecionado : selecao, naoSelecionado : !selecao}">
+    {{selecao == true ? "Selecionado" : "Não selecionado"}}</h1>
+
+<hr>
+
+<ul>
+    <li *ngFor="let user of vetorUsuario">{{user.phone}}</li>
+</ul>
