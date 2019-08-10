@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue App 7</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+
+<body>
+
+    <section class="estrutura">
+        <ul>
+            <li v-for="n in nomes">{{n | letrasMaiusculas(n)}}</li>
+        </ul>
+    </section>
+
+    <script>
+        var app = new Vue({
+            el: '.estrutura',
+            data: {
+                nomes: [
+                    'Alice', 'Janaína', 'Caio', 'Dougras', 'Charles Puyol'
+                ]
+            },
+            filters: {
+                letrasMaiusculas(n) {
+                    return n.toUpperCase();
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

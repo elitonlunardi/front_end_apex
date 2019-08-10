@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue App 6</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+
+<body>
+
+    <section class="estrutura">
+
+
+        <form>
+            <input type="text" placeholder="Produto" v-model="produto">
+            <input type="number" placeholder="Valor" v-model="valor">
+            <!-- <button v-on:click.prevent.stop="enviar()">Enviar</button> -->
+            <button @click.prevent.stop="enviar(produto,valor)">Enviar</button>
+        </form>
+
+    </section>
+
+    <script>
+        var app = new Vue({
+            el: '.estrutura',
+            data: {
+                produto: '',
+                valor: ''
+            },
+            methods: {
+                enviar(p, v) {
+                    alert(`${p} ${v}`);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

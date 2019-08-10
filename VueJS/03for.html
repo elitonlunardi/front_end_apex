@@ -13,8 +13,14 @@
         <ul>
             <li v-for="c in cursos">{{c.nome}}</li>
         </ul>
-    </section>
 
+        <table>
+            <tr v-for="(c, indice) in cursos">
+                <td>{{indice}}</td>
+                <td>{{c.nome}}</td>
+            </tr>
+        </table>
+    </section>
 
     <script>
         var app = new Vue({
@@ -27,7 +33,6 @@
                     { 'nome': 'Javascript' },
                     { 'nome': 'HTML' },
                     { 'nome': 'HTML e CSS' },
-
                 ]
             }
         })

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue App 4</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+
+<body>
+
+    <section class="estrutura">
+        <img v-bind:style="estilo" v-bind:src="imagem" v-bind:title="titulo">
+    </section>
+
+    <script>
+        var app = new Vue({
+            el: '.estrutura',
+            data: {
+                imagem: 'image1.jpg',
+                titulo: 'title',
+                estilo: [
+                    { 'border': 'solid 2px black' },
+                    { 'heigth': '100px' },
+                    { 'width': '200px' },
+                    { 'margin': '30px' }
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>
