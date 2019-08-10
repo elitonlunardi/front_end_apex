@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <p class="texto">
+        <span v-if="exibir"> {{mensagem1}} </span>
+        <span> {{mensagem2}} </span>
+    </p>
+    <p id="texto">{{mensagem1}}</p>
+
+
+    <script>
+
+        var app = new Vue({
+            el: '.texto',
+            data: {
+                exibir: false,
+                mensagem1: 'Hello world!',
+                mensagem2: 'Aprendendo vueJS'
+            }
+        })
+
+        var app2 = new Vue({
+            el: '#texto',
+            data: {
+                mensagem1: 'Hora : 13:52h'
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

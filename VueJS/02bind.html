@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue App 2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <section class="estrutura">
+        <ul>
+            <li>{{usuario.nome}}</li>
+            <li>{{usuario.idade}}</li>
+            <li>{{usuario.profissao}}</li>
+        </ul>
+    </section>
+
+    <script>
+
+        var app = new Vue({
+            el: '.estrutura',
+            data: {
+                usuario: {
+                    'nome': 'Ana',
+                    'idade': 25,
+                    'profissao': 'Gerente de projetos'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
