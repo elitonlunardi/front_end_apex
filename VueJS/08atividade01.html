@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue ativade 01</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+
+<body>
+
+    <section class="estrutura">
+
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <div class="card">
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <input type="text" class="form-control" placeholder="Nota 1" v-model="nota1">
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <input type="number" class="form-control" placeholder="Nota 2" v-model="nota2">
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <input type="number" class="form-control" placeholder="Nota 3" v-model="nota3">
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <input type="number" class="form-control" placeholder="Nota 4" v-model="nota4">
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <input type="number" class="form-control" placeholder="Qtd faltas"
+                                        v-model="qtdFaltas">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <input v-on:click.prevent.stop="cadastrar(nota1,nota2,nota3,nota4,qtdFaltas)"
+                                        type="button" class="btn btn-primary" value="Cadastrar">
+                                </div>
+                            </div>
+
+                            <div v-if="exibir">
+                                <div v-bind:class="classAlert">
+                                    {{mensagem}}
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        var app = new Vue({
+            el: '.estrutura',
+            data() {
+                return {
+                    nota1: '',
+                    nota2: '',
+                    nota3: '',
+                    nota4: '',
+                    qtdFaltas: '',
+                    exibir: false,
+                    aprovado: true,
+                    mensagem: '',
+                    classAlert: ''
+                }
+            },
+            methods: {
+                cadastrar(n1, n2, n3, n4, qtdFaltas) {
+                    var media = (parseFloat(n1) + parseFloat(n2) + parseFloat(n3) + parseFloat(n4)) / 4
+                    if (media >= 7 && qtdFaltas <= 15) {
+                        this.aprovado = true;
+                        this.exibir = true;
+                        this.mensagem = 'Aprovado';
+                        this.classAlert = 'alert alert-primary'
+                    } else {
+                        this.exibir = true;
+                        this.aprovado = false;
+                        this.mensagem = 'Reprovado';
+                        this.classAlert = 'alert alert-danger'
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
