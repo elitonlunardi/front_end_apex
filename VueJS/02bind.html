@@ -9,11 +9,18 @@
 
 <body>
     <section class="estrutura">
-        <ul>
-            <li>{{usuario.nome}}</li>
-            <li>{{usuario.idade}}</li>
-            <li>{{usuario.profissao}}</li>
-        </ul>
+        <div v-if="exibir">
+            <ul>
+                <li>{{usuario.nome}}</li>
+                <li>{{usuario.idade}}</li>
+                <li>{{usuario.profissao}}</li>
+            </ul>
+        </div>
+
+        <div v-else> 
+            <p>Usuário não encontrado!</p>
+        </div>
+
     </section>
 
     <script>
@@ -21,6 +28,7 @@
         var app = new Vue({
             el: '.estrutura',
             data: {
+                exibir: false,
                 usuario: {
                     'nome': 'Ana',
                     'idade': 25,
