@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Vue App 3</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
+
+    <section class="estrutura">
+        <ul>
+            <li v-for="c in cursos">{{c.nome}}</li>
+        </ul>
+    </section>
+
+
     <script>
         var app = new Vue({
+            el: '.estrutura',
+            data: {
+                cursos: [
+                    { 'nome': 'Angular' },
+                    { 'nome': 'ReactJS' },
+                    { 'nome': 'VueJs' },
+                    { 'nome': 'Javascript' },
+                    { 'nome': 'HTML' },
+                    { 'nome': 'HTML e CSS' },
 
+                ]
+            }
         })
     </script>
 </body>
+
 </html>
