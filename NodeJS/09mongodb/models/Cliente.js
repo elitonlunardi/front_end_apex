@@ -14,7 +14,7 @@ var Cliente = new Schema({
     },
     criadoEm: {
         type: Date,
-        default: Date.now(),
+        default: Date.now()
     }
 });
 

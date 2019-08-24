@@ -1,0 +1,26 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each registros}}
+        <tr>
+            <td>{{nome}}</td>
+            <td>{{idade}}</td>
+            <td>{{cidade}}</td>
+            <td><a href="alterar/{{_id}}" class="btn btn-warning">Editar</a></td>
+            <td><a href="excluir/{{_id}}" class="btn btn-danger">Remover</a></td>
+        </tr>
+        {{else}}
+
+        <h1>Nenhum registro encontrado</h1>
+
+        {{/each}}
+    </tbody>
+</table>
